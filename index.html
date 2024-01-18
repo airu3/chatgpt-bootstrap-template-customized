@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja-JP">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -376,19 +376,22 @@
 					<div class="chat-input-area overflow-hidden">
 						<div class="row">
 							<div class="col-12 chat-inputs-area-inner">
-								<div
+								<form
+									action=""
+									method="POST"
+									id="chat-form"
 									class="row chat-inputs-container d-flex align-items-center"
 								>
 									<textarea
-										name=""
-										id=""
+										name="message"
+										id="message"
 										class="col-11"
 										placeholder="Send a message"
 									></textarea>
-									<span class="col-1"
-										><i class="fa fa-paper-plane" aria-hidden="true"></i>
-									</span>
-								</div>
+									<button type="submit" class="col-1">
+										<i class="fa fa-paper-plane" aria-hidden="true"></i>
+									</button>
+								</form>
 							</div>
 						</div>
 					</div>
