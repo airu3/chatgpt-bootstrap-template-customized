@@ -18,20 +18,7 @@
 			href="images/chatgpt-favicon.png"
 			type="image/x-icon"
 		/>
-		<!-- cdn tailwind -->
-		<link
-			href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.7/tailwind.min.css"
-			rel="stylesheet"
-		/>
 		<link rel="stylesheet" href="css/style.css" />
-		<style>
-			.chat-inputs-area-inner {
-				position: fixed; /* 入力欄を固定位置にする */
-				bottom: 0; /* 画面の下部に配置する */
-				width: 100%; /* 入力欄の幅を画面全体にする */
-				height: 50px; /* 入力欄の高さを50pxにする */
-			}
-		</style>
 	</head>
 
 	<body>
@@ -385,72 +372,27 @@
 						</div>
 					</div>
 
-					<div
-						class="w-full pt-2 md:pt-0 dark:border-white/20 md:border-transparent md:dark:border-transparent md:w-[calc(100%-.5rem)]"
-					>
-						<form
-							class="stretch mx-2 flex flex-row gap-3 last:mb-2 md:mx-4 md:last:mb-6 lg:mx-auto lg:max-w-2xl xl:max-w-3xl"
-						>
-							<div
-								class="relative flex h-full flex-1 items-stretch md:flex-col"
-							>
-								<div class="flex w-full items-center">
-									<div
-										class="overflow-hidden [&amp;:has(textarea:focus)]:border-token-border-xheavy [&amp;:has(textarea:focus)]:shadow-[0_2px_6px_rgba(0,0,0,.05)] flex flex-col w-full dark:border-token-border-heavy flex-grow relative border border-token-border-heavy dark:text-white rounded-2xl bg-white dark:bg-gray-800 shadow-[0_0_0_2px_rgba(255,255,255,0.95)] dark:shadow-[0_0_0_2px_rgba(52,53,65,0.95)]"
-									>
-										<textarea
-											id="prompt-textarea"
-											tabindex="0"
-											data-id="request-1ad480a0-b15d-43a9-8df7-0f2651353c2d-9"
-											rows="1"
-											placeholder="Message ChatGPT…"
-											class="m-0 w-full resize-none border-0 bg-transparent py-[10px] pr-10 focus:ring-0 focus-visible:ring-0 dark:bg-transparent md:py-3.5 md:pr-12 placeholder-black/50 dark:placeholder-white/50 pl-3 md:pl-4"
-											style="
-												max-height: 200px;
-												height: 52px;
-												overflow-y: hidden;
-											"
-										></textarea
-										><button
-											disabled=""
-											class="absolute md:bottom-3 md:right-3 dark:hover:bg-gray-900 dark:disabled:hover:bg-transparent right-2 dark:disabled:bg-white disabled:bg-black disabled:opacity-10 disabled:text-gray-400 enabled:bg-black text-white p-0.5 border border-black rounded-lg dark:border-white dark:bg-white bottom-1.5 transition-colors"
-											data-testid="send-button"
-										>
-											<span class="" data-state="closed"
-												><svg
-													width="24"
-													height="24"
-													viewBox="0 0 24 24"
-													fill="none"
-													class="text-white dark:text-black"
-												>
-													<path
-														d="M7 11L12 6L17 11M12 18V7"
-														stroke="currentColor"
-														stroke-width="2"
-														stroke-linecap="round"
-														stroke-linejoin="round"
-													></path></svg
-											></span>
-										</button>
-									</div>
+					<!-- START CHAT INPUTS -->
+					<div class="chat-input-area overflow-hidden">
+						<div class="row">
+							<div class="col-12 chat-inputs-area-inner">
+								<div
+									class="row chat-inputs-container d-flex align-items-center"
+								>
+									<textarea
+										name=""
+										id=""
+										class="col-11"
+										placeholder="Send a message"
+									></textarea>
+									<span class="col-1"
+										><i class="fa fa-paper-plane" aria-hidden="true"></i>
+									</span>
 								</div>
 							</div>
-						</form>
-						<div
-							class="relative px-2 py-2 text-center text-xs text-gray-600 dark:text-gray-300 md:px-[60px]"
-						>
-							<span
-								>ChatGPT can make mistakes. Consider checking important
-								information.</span
-							>
 						</div>
 					</div>
-
-					<!-- START FOOTER -->
-					<footer class="">
-						<div class="text-center">© 2020 Copyright Sajjad Hussain</div>
-					</footer>
+					<!--  -->
 				</div>
 			</div>
 		</div>
